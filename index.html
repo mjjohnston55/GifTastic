@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <div id="topics"></div><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript">
@@ -17,7 +18,11 @@
     var topics = [];
     topics = ["poker", "dogs", "cats", "narwhals", "chicken", "breadsticks", "waterfalls", "skydiving", "vaulting"];
 
-
+    // loop to create buttons for each topic
+    for (i=0; i < topics.length; i++) {
+        var buttons = $('<button>'+ topics[i] + '</button>') 
+        buttons.appendTo('#topics'); 
+    }
 
 
 
